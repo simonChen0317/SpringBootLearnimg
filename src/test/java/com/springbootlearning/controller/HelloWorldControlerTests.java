@@ -26,6 +26,7 @@ public class HelloWorldControlerTests {
     }
     @Test
     public void getHello()throws Exception{
+
         mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
